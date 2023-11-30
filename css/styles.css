@@ -118,7 +118,7 @@ main {
 }
 
 /* Media Query For Tablet Viewport */
-@media screen and (min-width: 630px) {
+@media screen and (min-width: 630px), print {
 	
 	/* Tablet Viewport: show tablet-desktop class, hide mobile class */
 	.tablet-desktop {
@@ -150,15 +150,12 @@ main {
 	nav ul li a {
 		padding: 0.1em 0.75em;
 	}
-}
-	
-/* End of Media Query For Tablet Viewport */
-	
-/* #exercises {
+ #exercises {
 	clear: both;
 	border-top: 1px solid #000;
 	border-bottom: 1px solid #000;
-	background-color: #f2f2f2;
+	background: linear-gradient(to right, #ccc, #fff);
+/*	background-color: #f2f2f2;*/
 	padding: 1% 2%;
 }
 
@@ -168,7 +165,82 @@ main {
 
 #exercises dd {
 	padding: 0.5% 1% 2% 0;
-} */
+} 
+	.tel-num{
+		font-size: 1.25em;
+		
+	}
+/* Tablet viewport styles rules for main */
+main ul {
+	margin: 0 0 4% 10%
+}
+	}
+/*End of Media Query For Tablet Viewport */
+/* Media Query For Desktop Viewport */
+@media screen and (min-width: 769px), print{
+	header {
+		width: 25%;
+		float: left;
+		padding-bottom: 0;
+	}
+	nav {
+		float: right;
+		width: 70%;
+		margin: 4em 1em 0 0;
+	}
+	nav ul {
+		text-align: right;
+		
+	}
+	nav ul li {
+		border: none;
+	}
+	nav li a {
+		padding: 0.5em 1em;
+	}
+/* desktop view port: style rules for main content*/
+	main {
+		clear: both;
+	}
+	main h1 {
+		font-size: 2em;
+	}
+	#weights, #cardio, #training {
+		width: 29%;
+		float: left;
+		margin: 0 2%
+	}
+	#exercises {
+		clear: left;
+	}
+	nav li a:hover {
+		color: black;
+		background-color: white;
+	}
+}	
+/* end of desktop viewport */
+
+/* Large Screen media query */
+@media screen and (min-width: 1921px) {
+	#container {
+		width: 1921px;
+		margin: 0 auto;
+	}
+	
+}
+	
+/* End of Large Screen media query */
+
+
+/* Print media query */
+@media print {
+	body {
+		background-color: #fff;
+		color: #000;
+	}
+}
+/* End ofPrint media query */
+
 
 .external-link {
 	color: #606;
@@ -179,7 +251,7 @@ main {
 #contact .contact-email-link {
 		color: #606;
 	text-decoration: none;
-}
+} 
 
 
 
