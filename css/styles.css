@@ -13,7 +13,7 @@ font-family: 'Roboto Slab', serif;
 @import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Roboto+Slab:wght@100;200;400;900&display=swap');
 
 /* CSS Reset */
-body, header, nav, main, footer, h1, div, img, ul, li {
+body, header, nav, main, footer, h1, div, img, ul, li, figure, figcaption, section, article, aside {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -32,8 +32,6 @@ img {
 
 /* Style rules for Header */ 
 header {
-	position: -webkit-sticky;
-	position: sticky;
 	top: 0;
 	background-color: #000;
 	height: 190px;
@@ -88,6 +86,25 @@ main {
 	font-size: 1.2em;
 	font-family: 'Roboto Slab', serif;
 }
+.mobile h3 {
+	text-shadow: 5px 5px 8px #ccc;
+}
+
+article {
+	text-shadow: 5px 5px 8px #ccc;
+}
+
+article h3 {
+	text-align: center;
+}
+
+article img {
+	margin: 0 auto;
+}
+
+article:nth-of-type(2) {
+	background-color: rgba(204,204,204, 0.6);
+}
 
 .tel-link {	
 	background-color: #404040;
@@ -107,6 +124,25 @@ main {
 
 .hours {
 	margin-left: 10%;
+}
+
+.frame {
+	position: relative;
+	max-width: 450px;
+	margin: 2% auto;
+}
+
+.pic-text{
+position: absolute;
+bottom: 0;
+background: rgba(0, 0, 0, 0.5);
+color: #fff;
+width: 91%;
+padding: 20px;
+text-align: center;
+font-family: Verdana, Arial, sans-serif;
+font-size: 1.5em;
+font-weight: bold;
 }
 
 #weights, #cardio, #training {
@@ -131,7 +167,6 @@ main {
 	
 	/* Tablet Viewport: Header CSS */
 	header {
-		position: static;
 		padding-bottom: 2%;
 	}
 	
@@ -174,6 +209,33 @@ main {
 main ul {
 	margin: 0 0 4% 10%
 }
+	.grid {
+		display: grid;
+		grid-template-columns: auto auto auto;
+		grid-gap: 20px;
+	}
+	
+	.pic-text {
+		font-size: 1.5em;
+		padding: 20px;
+    } 
+	
+	aside {
+		text-align: center;
+		font-size: 1.25em;
+		font-style: italic;
+		font-weight: bold;
+		padding: 2%;
+		background-color: rgba(204, 204, 204, 0.6);
+		box-shadow: 5px 5px 5px #000;
+		text-shadow: 5px 5px 8px #b3b3b3;
+		border-radius: 15px;
+	}
+	
+	.grid-item4 {
+		grid-column: 1 / 4;
+	}
+	
 	}
 /*End of Media Query For Tablet Viewport */
 /* Media Query For Desktop Viewport */
@@ -198,13 +260,33 @@ main ul {
 	nav li a {
 		padding: 0.5em 1em;
 	}
-/* desktop view port: style rules for main content*/
+/* desktop viewport: style rules for main content*/
 	main {
 		clear: both;
 	}
 	main h1 {
 		font-size: 2em;
 	}
+	
+	article h3 {
+		font-size: 1.75em;
+	}
+	
+	.pic-text {
+		font-size: 1.5em;
+		padding: 20px;
+    } 
+	
+	
+	frame {
+opacity: 0.9;
+	}
+	
+	frame:hover {
+opacity: 1;
+box-shadow: 8px 8px 10px #808080; 
+	}
+	
 	#weights, #cardio, #training {
 		width: 29%;
 		float: left;
@@ -226,7 +308,6 @@ main ul {
 		width: 1921px;
 		margin: 0 auto;
 	}
-	
 }
 	
 /* End of Large Screen media query */
@@ -239,7 +320,7 @@ main ul {
 		color: #000;
 	}
 }
-/* End ofPrint media query */
+/* End of Print media query */
 
 
 .external-link {
@@ -266,6 +347,7 @@ main ul {
 	font-size: 1.35em;
 	color: #606;
 	font-weight: bold;
+	text-shadow: 5px 5px 8px #ccc;
 }
 
 /* Style rules for footer */ 
