@@ -13,7 +13,7 @@ font-family: 'Roboto Slab', serif;
 @import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Roboto+Slab:wght@100;200;400;900&display=swap');
 
 /* CSS Reset */
-body, header, nav, main, footer, h1, div, img, ul, li, figure, figcaption, section, article, aside {
+body, header, nav, main, footer, h1, div, img, ul, li, figure, figcaption, section, article, aside, table {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -153,6 +153,51 @@ font-weight: bold;
 	border-radius: 8px;
 }
 
+.map {
+	border-radius: 8px solid #000;
+	width: 95%;
+	height: 50%;
+}
+
+
+
+#form {
+	margin-top: 2%;
+	background:linear-gradient(to left, #888, #f2f2f2, #888);
+	padding: 2%;
+}
+
+#form h2 {
+	text-align: center;
+}
+
+/* Style rules for form elements */
+fieldset, input, select, textarea {
+	margin-bottom: 2%;
+}
+
+fieldset legend {
+	font-weight: bold;
+	font-size: 1.25em;
+}
+
+label {
+	display: block;
+	padding-top: 3%
+}
+
+form #submit {
+	margin: 0 auto;
+	border: none;
+	display: block;
+	padding: 2%;
+	background: radial-gradient(#b3b3b3, #555);
+	font-size: 1em;
+	border-radius: 10px;
+}
+
+
+
 /* Media Query For Tablet Viewport */
 @media screen and (min-width: 630px), print {
 	
@@ -236,6 +281,41 @@ main ul {
 		grid-column: 1 / 4;
 	}
 	
+	table {
+		border: 1px solid #000;
+		border-collapse: collapse;
+		margin: 0 auto;
+		width: 100%;
+	}
+	
+	caption {
+		font-size: 1.5em;
+		font-weight: bold;
+		padding: 1%;
+	}
+	
+	th, td {
+		border: 1px solid #000;
+		padding: 2%;
+	}
+	
+	th {
+		background-color: #000;
+		color: #fff;
+		font-size: 1.15em;
+	}
+	
+	tr:nth-child(odd) {
+		background-color: #ccc;
+	}
+	
+	/* Tablet Viewport: Style rule for form element */
+	form {
+		width: 70%;
+		margin: 0 auto;
+		
+	}
+	
 	}
 /*End of Media Query For Tablet Viewport */
 /* Media Query For Desktop Viewport */
@@ -298,6 +378,21 @@ box-shadow: 8px 8px 10px #808080;
 	nav li a:hover {
 		color: black;
 		background-color: white;
+	}
+	
+	/* Desktop Viewport: Style rules for form elements */
+	form {
+		width: auto;
+	}
+	
+	.form-grid {
+		display: grid;
+		grid-template-columns: auto auto auto;
+		grid-gap: 20px;
+	}
+	
+	.btn {
+		grid-column: 1 / span 3;
 	}
 }	
 /* end of desktop viewport */
